@@ -58,16 +58,14 @@
             color: white;
         }
 
-        /* Fix for padding behavior */
         .signup-form input {
             box-sizing: border-box;
         }
 
-        /* Responsive Rules */
+       
         @media (max-width: 400px) {
             .signup-form {
                 width: 90%;
-                /* Form takes up 90% of screen width on mobile */
                 top: 50%;
             }
 
@@ -82,15 +80,12 @@
 
             .signup-form button {
                 width: 100%;
-                /* Larger button for easier tapping on mobile */
             }
         }
 
-        /* Fix for short screens (landscape mode) */
         @media (max-height: 600px) {
             .signup-form {
                 position: relative;
-                /* Switch from absolute to relative to allow scrolling */
                 top: 0;
                 left: 0;
                 transform: none;
@@ -103,14 +98,14 @@
 <body>
     <div class="signup-form">
         <h1>Signup Form</h1>
-        <form autocomplete="off" action="./index.html" method="post">
+        <form autocomplete="off" action="./index.html">
             <p>First Name</p>
-            <input type="text" name="first name" placeholder="First Name" pattern="[a-zA-Z]{3,30}"
-                title="Username must be between 3 and 30 letters long and contain no numbers or special characters."
+            <input type="text" name="first name" placeholder="First Name" pattern="[a-zA-Z ]{3,30}"
+                title="Username must be between 3 and 30 letters long and contain no numbers or special characters except space."
                 required>
             <p>Last Name</p>
-            <input type="text" name="last name" placeholder="Last Name" pattern="[a-zA-Z]{3,30}"
-                title="Username must be between 3 and 30 letters long and contain no numbers or special characters."
+            <input type="text" name="last name" placeholder="Last Name" pattern="[a-zA-Z ]{3,30}"
+                title="Username must be between 3 and 30 letters long and contain no numbers or special characters except space."
                 required>
             <p>Email</p>
             <input type="Email" name="email" placeholder="Eamil" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
