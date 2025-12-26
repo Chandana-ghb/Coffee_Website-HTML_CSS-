@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body {
+            background-image: url('./Assets/signup.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+
+        .signup-form {
+            top: 45%;
+            left: 50%;
+            width: 350px;
+            transform: translate(-50%, -50%);
+            color: black;
+            position: absolute;
+        }
+
+        .signup-form h1 {
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 40px 0;
+        }
+
+        .signup-form p {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px 10px;
+            border-radius: 50px;
+            font-size: 16px;
+        }
+
+        .signup-form button {
+            margin: 20px 0;
+            border-radius: 50px;
+            padding: 10px 10px;
+            width: 40%;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .signup-form button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-form">
+        <h1>Signup Form</h1>
+        <form autocomplete="off" action="./index.html"  method="post">
+            <p>First Name</p>
+            <input type="text" name="first name" placeholder="First Name" pattern="[a-zA-Z]{3,30}"
+                title="Username must be between 3 and 30 letters long and contain no numbers or special characters."
+                required>
+            <p>Last Name</p>
+            <input type="text" name="last name" placeholder="Last Name" pattern="[a-zA-Z]{3,30}"
+                title="Username must be between 3 and 30 letters long and contain no numbers or special characters."
+                required>
+            <p>Email</p>
+            <input type="Email" name="email" placeholder="Eamil" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+                title="Please enter a valid email address (e.g., name@gmail.com)" required>
+            <p>Password</p>
+            <input type="Password" name="password" placeholder="Password"
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,16}"
+                title="Password must be 8-16 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character !@#$%^&*"
+                required>
+            <p>Confirm Password</p>
+            <input type="password" name="Confirm password" placeholder="Confirm Password"
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,16}"
+                title="Password must be 8-16 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character !@#$%^&*"
+                required>
+            <center><button type="submit">Sign-Up</button></center>
+        </form>
+    </div>
+</body>
+
+</html>

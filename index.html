@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <style>
+        body
+        {
+            background-image: url('./Assets/SignIn.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        .login-form
+        {
+            width: 350px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            color:black;
+        }
+        .login-form h1
+        {
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 40px 0;
+        }
+        .login-form p
+        {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+        .login-form input
+        {
+            font-size: 16px;
+            width:100%;
+            padding:10px 10px;
+            border:0;
+            outline:none;
+            border-radius: 50px;
+        }
+        .login-form button
+        {
+            font-size: 16px;
+            font-weight: bold;
+            margin:20px 0;
+            padding: 10px 10px;
+            width:30%;
+            border-radius: 5px;
+            border:0;
+        }
+        .login-form button:hover
+        {
+            background-color: black;
+            color: aliceblue;
+        } 
+        
+        /* New Styling for Sign Up section */
+        .signup-text {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 24px;
+            color: black;
+        }
+        .signup-text a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 1px solid white;
+        }
+        .signup-text a:hover {
+            color: white;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <h1>Login Form</h1>
+        <form autocomplete="off" action="./home.html">
+            <p>User Name</p>
+            <input type="text" name="user name" placeholder="User Name" pattern="[a-zA-Z]{3,30}" title="Username must be between 3 and 30 letters long and contain no numbers or special characters." required>
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,16}" title="Password must be 8-16 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character !@#$%^&*" required>
+            <center><button type="submit">Login</button></center>
+
+            <div class="signup-text">
+                Don't have an account? <a href="./SignUp.html">Sign Up</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
